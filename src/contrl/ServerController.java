@@ -20,7 +20,6 @@ public class ServerController {
             calculation = server.getMessage();
         }
 
-        server.close();
         logger.close();
     }
 }

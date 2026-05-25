@@ -21,8 +21,9 @@ public class ComputationLogger {
     public void logCalculation(String calculation) {
         try {
             index++;
-            String output = String.valueOf(index) + ". " + calculation + "\n";
-            writer.append(output);
+            String output = String.valueOf(index) + ". " + calculation;
+            writer.append(output + "\n");
+            System.out.println(output);
         } catch (IOException ioe) {
             System.out.println("Unable to write to file");
         }

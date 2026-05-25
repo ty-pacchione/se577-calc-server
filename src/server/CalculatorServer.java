@@ -45,14 +45,4 @@ public class CalculatorServer {
             return null;
         }
     }
-
-    public void close() {
-        try {
-            serverSocket.close();
-            clientSocket.close();
-            inputReader.close();
-        } catch (IOException ioe) {
-            System.out.println("Unable to close server");
-        }
-    }
 }

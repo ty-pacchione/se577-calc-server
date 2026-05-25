@@ -1,9 +1,15 @@
 package main;
 
-import server.Server;
+import contrl.ServerController;
+import logger.ComputationLogger;
+import server.CalculatorServer;
 
 public class Main {
     public static void main(String[] args) {
-        new Server(3000);
+        CalculatorServer server = new CalculatorServer();
+        ComputationLogger logger = new ComputationLogger();
+        ServerController controller = new ServerController(server, logger);
+
+        controller.run();
     }
 }

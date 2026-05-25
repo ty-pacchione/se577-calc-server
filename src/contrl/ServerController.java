@@ -12,7 +12,7 @@ public class ServerController {
         this.logger = logger;
     }
 
-    public void run() {
+    public void start() {
         String calculation = server.getMessage();
 
         while (calculation != null) {
